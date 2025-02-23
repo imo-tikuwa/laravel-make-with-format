@@ -69,16 +69,6 @@
             }
         }
     },
-    "archive": {
-        "exclude": [
-            "/.docker",
-            "/.github",
-            "/demo_app",
-            "/compose.yml",
-            "/Makefile",
-            "/pint.json"
-        ]
-    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
