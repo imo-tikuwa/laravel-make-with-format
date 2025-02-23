@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace ImoTikuwa\LaravelMakeWithFormat\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelMakeWithFormatCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-make-with-format';
 
     public $description = 'My command';
 
