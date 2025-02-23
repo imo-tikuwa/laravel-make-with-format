@@ -29,7 +29,9 @@ class PintRunner implements RunnerInterface
             $target,
         ], $event);
 
-        if ($event->input->hasOption('test') || $event->input->hasOption('pest')) {
+        $hasTest = $event->input->hasOption('test') && $event->input->getOption('test');
+        $hasPest = $event->input->hasOption('pest') && $event->input->getOption('pest');
+        if ($hasTest || $hasPest) {
             $target = str_replace('app/', 'tests/Feature/', $target);
 
             $event->output->writeln('');
