@@ -2,6 +2,11 @@
 
 All notable changes to `laravel-make-with-format` will be documented in this file.
 
+## v0.2.0 - 2025-02-23
+
+- PintRunner の test/pest オプションの有無について正しく動作してなかったのを修正
+- phpstan について実行時にエラーが起きていたのを修正
+
 ## v0.1.2 - 2025-02-23
 
 パッケージとして公開する際に不要なコードを除く方法について composer.json ではなく .gitattributes で行うのが正しかったみたい。という修正
