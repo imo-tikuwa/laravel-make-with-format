@@ -29,9 +29,17 @@ class DependenciesChecker
      */
     private function isCliAvailable(string $cliPath): bool
     {
-        $command = strtoupper(substr(PHP_OS, 0, 3)) === 'WIN' ? "where {$cliPath}" : "which {$cliPath}";
+        $command = $this->isWindows() ? "where {$cliPath}" : "which {$cliPath}";
 
         return !empty($this->runShellCommand($command));
+    }
+
+    /**
+     * OSがWindowsかどうかを判定
+     */
+    protected function isWindows(): bool
+    {
+        return strtoupper(substr(PHP_OS, 0, 3)) === 'WIN';
     }
 
     /**
