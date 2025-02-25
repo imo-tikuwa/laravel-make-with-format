@@ -20,6 +20,7 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     mkdir ${COMPOSER_HOME} && \
-    chown -R www-data: ${COMPOSER_HOME}
+    chown -R www-data: ${COMPOSER_HOME} && \
+    chown -R www-data: /var/www
 
 USER www-data
