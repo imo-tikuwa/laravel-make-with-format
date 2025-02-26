@@ -65,6 +65,9 @@ class PostCommandCodeFormatter
         if (!App::environment('local')) {
             // APP_ENVがローカル以外のとき何もしない
             return;
+        } elseif (!config('make-with-format.enabled')) {
+            // 設定ファイルによって無効化されているとき何もしない
+            return;
         } elseif ($event->exitCode !== 0) {
             // 実行したコマンド自体の終了コードが正常でないときは何もしない
             return;

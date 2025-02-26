@@ -1,6 +1,7 @@
 init:
 	docker compose up -d
 	docker compose exec app composer install
+	docker compose exec app composer install -d demo_app
 
 app:
 	docker compose exec app bash
