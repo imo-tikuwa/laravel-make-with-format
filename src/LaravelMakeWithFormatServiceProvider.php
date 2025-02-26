@@ -19,7 +19,9 @@ class LaravelMakeWithFormatServiceProvider extends PackageServiceProvider
          *
          * More info: https://github.com/spatie/laravel-package-tools
          */
-        $package->name('laravel-make-with-format');
+        $package
+            ->name('laravel-make-with-format')
+            ->hasConfigFile();
     }
 
     public function packageBooted(): void

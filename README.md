@@ -15,6 +15,12 @@ You can install the package via composer:
 composer require --dev imo-tikuwa/laravel-make-with-format
 ```
 
+You can publish the config file with:
+
+```bash
+php artisan vendor:publish --tag="make-with-format-config"
+```
+
 ### Optional Dependencies
 
 This package will use the following tools **if they are installed** in your project:
